@@ -8,32 +8,48 @@
       margin: 0;
       background: #0f172a;
       color: white;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 50px;
-      background: #1e293b;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, #1e293b, #020617);
     }
 
     h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 44px;
     }
 
-    p {
-      font-size: 18px;
+    h2 {
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
     }
 
     section {
       padding: 30px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .card {
       background: #1e293b;
       padding: 20px;
       margin: 15px 0;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
 
     a {
@@ -45,6 +61,7 @@
       text-align: center;
       padding: 20px;
       background: #020617;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -60,9 +77,15 @@
   <h2>🧠 About Me</h2>
   <div class="card">
     <p>
-      I am a Signal Processing and Communication Engineering student with interests in wireless systems, antenna design, and communication technologies.  
-      I use tools like ANSYS HFSS and GNU Radio to design and simulate real-world systems.
+      I am a Signal Processing and Communication Engineering student at IIT Bhubaneswar. 
+      This website is a collection of everything I learn throughout my engineering journey.
     </p>
+    <p>
+      I share my projects, simulations, and notes related to signal processing, wireless communication, 
+      and engineering tools. My goal is to build, learn, and document my work so that others can 
+      understand concepts easily and use these resources when needed.
+    </p>
+    <p><strong>Learn → Build → Share</strong></p>
   </div>
 </section>
 
@@ -70,45 +93,57 @@
   <h2>📡 Projects</h2>
 
   <div class="card">
-    <h3>Antenna Design (HFSS)</h3>
-    <p>Dipole, Monopole, Patch, Horn, and Yagi antenna designs with simulations.</p>
-    <a href="https://github.com/PSrihari2000/ansys-antenna-designs">View Repository</a>
+    <h3>ANSYS Antenna Designs</h3>
+    <p>Collection of dipole, monopole, patch, horn, and Yagi antenna simulations using HFSS.</p>
+    <a href="https://github.com/PSrihari2000/ansys-antenna-designs">View Repository →</a>
   </div>
 
   <div class="card">
     <h3>Wireless Communication (GNU Radio)</h3>
-    <p>Simulations including QAM modulation, noise channels, and RF systems.</p>
+    <p>QAM modulation, noise channels, and RF communication system simulations.</p>
     <a href="#">Coming Soon</a>
   </div>
 
   <div class="card">
     <h3>Signal Processing</h3>
-    <p>Work related to filtering, FFT, and signal analysis.</p>
+    <p>Filtering, FFT, and signal analysis using MATLAB and Python.</p>
     <a href="#">Coming Soon</a>
   </div>
 
 </section>
 
 <section>
-  <h2>🛠 Skills</h2>
-  <div class="card">
-    <p>Signal Processing</p>
-    <p>Wireless Communication</p>
-    <p>MATLAB</p>
-    <p>Python, C</p>
-     <p>CST STudio</p>
-    <p>Arduino IDE</p>
-     <p>Optiwave</p>
-     <p>Google colab</p>
-    <p>ANSYS HFSS</p>
-    <p>GNU Radio</p>
+  <h2>🧠 Core Skills</h2>
+  <div class="grid">
+    <div class="card">Signal Processing</div>
+    <div class="card">Wireless Communication</div>
+    <div class="card">Communication Systems</div>
+    <div class="card">ML / DL </div>
+  </div>
+</section>
+
+<section>
+  <h2>🛠 Tools & Technologies</h2>
+  <div class="grid">
+    <div class="card">MATLAB</div>
+    <div class="card">Python / C</div>
+    <div class="card">ANSYS HFSS</div>
+    <div class="card">LATEX</div>
+    <div class="card">GNU Radio</div>
+    <div class="card">CST Studio</div>
+    <div class="card">Optiwave</div>
+    <div class="card">Arduino IDE</div>
+    <div class="card">Google Colab</div>
   </div>
 </section>
 
 <section>
   <h2>📚 Learning & Notes</h2>
   <div class="card">
-    <p>I continuously document my learning in communication systems and signal processing.</p>
+    <p>
+      I continuously document my learning in signal processing and communication systems. 
+      This includes notes, concepts, and practical understanding gained through projects.
+    </p>
   </div>
 </section>
 
