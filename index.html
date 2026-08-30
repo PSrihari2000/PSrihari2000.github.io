@@ -1,141 +1,489 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Srihari | Signal Processing & Communication Engineer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Srihari — M.Tech Signal Processing &amp; Communications student at IIT Bhubaneswar. WLAN, SDR, and signal processing projects, publications, and experience." />
+<meta property="og:title" content="Srihari | Signal Processing & Communication Engineer" />
+<meta property="og:description" content="M.Tech candidate at IIT Bhubaneswar — WLAN systems, SDR, and signal processing projects." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%A1%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<title>Srihari | Signal Processing & Communication Engineer</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+<style>
+  :root {
+    --bg: #0a0f1e;
+    --bg-soft: #0f172a;
+    --panel: #141c30;
+    --panel-2: #101828;
+    --border: #23304a;
+    --text: #e8edf7;
+    --text-dim: #93a0bd;
+    --accent: #38bdf8;
+    --accent-2: #f59e0b;
+    --accent-3: #a78bfa;
+    --radius: 16px;
+  }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(90deg, #1e293b, #020617);
-    }
+  * { box-sizing: border-box; }
 
-    h1 {
-      margin: 0;
-      font-size: 44px;
-    }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+  }
 
-    h2 {
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-    }
+  body {
+    font-family: 'Inter', -apple-system, Segoe UI, Arial, sans-serif;
+    margin: 0;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(56,189,248,0.16), transparent 60%),
+      radial-gradient(700px 500px at -10% 10%, rgba(167,139,250,0.12), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
+  code, .mono { font-family: 'JetBrains Mono', monospace; }
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
+  ::selection { background: rgba(56,189,248,0.35); }
 
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-    .highlight {
-      border: 2px solid #38bdf8;
-    }
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    background: rgba(10,15,30,0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
+  .brand {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    font-size: 18px;
+  }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
+  .brand span { color: var(--accent); }
 
-    .tag {
-      display: inline-block;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #94a3b8;
-      font-size: 12px;
-      padding: 2px 10px;
-      border-radius: 999px;
-      margin: 2px 4px 2px 0;
-    }
+  .navlinks {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
 
-    .meta {
-      color: #94a3b8;
-      font-size: 14px;
-      margin: 0 0 8px 0;
-    }
+  .navlinks a {
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 500;
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+  .navlinks a:hover { color: var(--text); text-decoration: none; }
 
-    th, td {
-      text-align: left;
-      padding: 10px;
-      border-bottom: 1px solid #334155;
-    }
+  /* HERO */
+  header.hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    border-bottom: 1px solid var(--border);
+  }
 
-    th {
-      color: #38bdf8;
-    }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.3);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      margin-top: 40px;
-    }
-  </style>
+  h1.name {
+    margin: 0;
+    font-size: clamp(38px, 7vw, 60px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #fff, #b9d7ff 60%, var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .role {
+    color: var(--text-dim);
+    font-size: 17px;
+    margin: 14px 0 24px;
+  }
+
+  .pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .pill {
+    font-size: 13px;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--panel);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .btn:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: #182339;
+  }
+
+  .btn.primary {
+    background: linear-gradient(135deg, var(--accent), #0ea5e9);
+    color: #01202f;
+    border: none;
+  }
+
+  .btn.primary:hover { filter: brightness(1.08); }
+
+  .btn svg { width: 16px; height: 16px; }
+
+  /* SECTIONS */
+  section {
+    padding: 64px 32px;
+    max-width: 1240px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .prose {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+
+  .cards-grid .card { margin: 0; }
+
+  .span-all { grid-column: 1 / -1; }
+
+  section.in-view { opacity: 1; transform: translateY(0); }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .section-head .num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  h2 {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .section-sub {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin: -14px 0 26px;
+  }
+
+  /* CARDS */
+  .card {
+    position: relative;
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin: 16px 0;
+    border-radius: var(--radius);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    border-color: #2f4066;
+  }
+
+  .card.highlight {
+    border-color: rgba(56,189,248,0.55);
+    box-shadow: 0 0 0 1px rgba(56,189,248,0.15), 0 18px 40px rgba(0,0,0,0.35);
+  }
+
+  .card.highlight::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-3));
+  }
+
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #1a1206;
+    background: linear-gradient(135deg, var(--accent-2), #fbbf24);
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .card p { color: #cbd5f0; }
+  .card ul { margin: 8px 0; padding-left: 20px; color: #cbd5f0; }
+  .card ul li { margin-bottom: 6px; }
+
+  .meta {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    margin: 0 0 10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.25);
+    color: #9fd6f7;
+    font-size: 11.5px;
+    font-weight: 500;
+    padding: 4px 11px;
+    border-radius: 999px;
+  }
+
+  .repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .repo-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
+  .repo-link:hover svg { transform: translateX(3px); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+  }
+
+  .grid .card {
+    margin: 0;
+    text-align: center;
+    padding: 18px 14px;
+    font-weight: 600;
+    font-size: 14.5px;
+  }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+
+  th {
+    color: var(--accent);
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(56,189,248,0.05); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 30px;
+  }
+
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .social-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    transition: 0.2s;
+  }
+
+  .social-row a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  .social-row svg { width: 18px; height: 18px; }
+
+  footer p { color: var(--text-dim); font-size: 13px; margin: 4px 0; }
+
+  @media (max-width: 640px) {
+    .navlinks { display: none; }
+    header.hero { padding: 70px 16px 50px; }
+    section { padding: 48px 16px; }
+  }
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Srihari</h1>
-  <p>M.Tech (2025&ndash;2027) | Signal Processing &amp; Communications | IIT Bhubaneswar</p>
-  <p>Experience in WLAN systems, SDR, and industrial automation</p>
+<nav>
+  <div class="brand">P&nbsp;SRI<span>HARI</span></div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Available for opportunities</span>
+  <h1 class="name">Srihari</h1>
+  <p class="role">M.Tech (2025&ndash;2027) &middot; Signal Processing &amp; Communications &middot; IIT Bhubaneswar</p>
+  <div class="pills">
+    <span class="pill">📶 WLAN Systems</span>
+    <span class="pill">📻 SDR</span>
+    <span class="pill">🎛 Signal Processing</span>
+    <span class="pill">🤖 Industrial Automation</span>
+    <span class="pill">🧠 Machine Learning</span>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="#projects">View Projects</a>
+    <a class="btn" href="https://github.com/PSrihari2000" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
+    <a class="btn" href="https://linkedin.com/in/srihari-p-ba072b253" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .51.53 0 1.19 0h13.62C15.47 0 16 .51 16 1.15v13.7c0 .64-.53 1.15-1.19 1.15H1.19C.53 16 0 15.49 0 14.85V1.15zM4.75 13.4V6.17H2.4v7.23h2.35zM3.58 5.18c.82 0 1.33-.54 1.33-1.22-.02-.7-.51-1.22-1.31-1.22-.8 0-1.33.53-1.33 1.22 0 .68.51 1.22 1.29 1.22h.02zM6.87 13.4h2.35V9.37c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.63v3.87h2.35V9.25c0-2.17-1.16-3.18-2.7-3.18-1.26 0-1.82.7-2.13 1.18h.02V6.17H6.87c.03.66 0 7.23 0 7.23z"/></svg>
+      LinkedIn
+    </a>
+    <a class="btn" href="mailto:puttasrihari34@gmail.com">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4zm1.2.3 5.8 4.2 5.8-4.2v-.02L8 8 2.2 4.28V4.3z"/></svg>
+      Email
+    </a>
+  </div>
 </header>
 
 <!-- ABOUT -->
-<section>
-  <h2>🧠 About Me</h2>
-  <div class="card">
+<section id="about">
+  <div class="section-head"><span class="num">01</span><h2>About Me</h2></div>
+  <div class="card prose">
     <p>
       I am an M.Tech candidate in Signal Processing and Communications at IIT Bhubaneswar.
       This website is a collection of everything I learn throughout my engineering journey.
     </p>
-
     <p>
       I share my projects, simulations, and notes related to signal processing, wireless communication,
       and engineering tools. My goal is to build, learn, and document my work so that others can
       use these resources as reference, especially for quick understanding and last-minute lab preparation.
     </p>
-
     <p><strong>Learn → Build → Share</strong></p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section>
-  <h2>💼 Industry Experience</h2>
+<section id="experience">
+  <div class="section-head"><span class="num">02</span><h2>Industry Experience</h2></div>
 
+  <div class="cards-grid">
   <div class="card highlight">
-    <h3>Engineering Intern &ndash; WLAN Modem Tech Systems</h3>
+    <h3>Engineering Intern &ndash; WLAN Modem Tech Systems <span class="badge">Qualcomm</span></h3>
     <p class="meta">Qualcomm, Bengaluru, India &middot; May 2026 &ndash; July 2026</p>
     <ul>
       <li>Implemented and validated a traffic-aware power optimization algorithm in WLAN firmware for gaming applications on Qualcomm Wi-Fi chipsets.</li>
@@ -144,10 +492,11 @@
       <li>Validated the prototype through latency testing: <strong>0% packet loss</strong> with only a <strong>+1&nbsp;ms</strong> round-trip latency increase (6&nbsp;ms &rarr; 7&nbsp;ms).</li>
       <li>Conducted power analysis using current waveforms, state residency, and rail-level measurements, achieving a <strong>13.7% reduction in battery power consumption</strong> versus baseline.</li>
     </ul>
+    <div class="tags"><span class="tag">WLAN Firmware</span><span class="tag">Power Optimization</span><span class="tag">Latency Validation</span></div>
   </div>
 
   <div class="card">
-    <h3>Junior Automation Engineer</h3>
+    <h3>Junior Automation Engineer <span class="badge" style="background:linear-gradient(135deg,#a78bfa,#7c3aed); color:#160933;">Foxconn</span></h3>
     <p class="meta">Foxconn Interconnect Technology (FIT), Hyderabad, India &middot; July 2024 &ndash; Jan 2025 &middot; Apple AirPods Manufacturing</p>
     <ul>
       <li>Contributed to setup and high-volume manufacturing operations for Apple AirPods as part of the first cohort of Indian engineers, collaborating with multinational teams from China, Taiwan, Vietnam, and India.</li>
@@ -155,16 +504,21 @@
       <li>Performed troubleshooting and fault diagnosis for automated production equipment, including sensor failure analysis and machine calibration.</li>
       <li>Conducted Failure Analysis and Corrective Actions (FACA) and worked with machine vision inspection systems to identify root causes and improve production reliability.</li>
     </ul>
+    <div class="tags"><span class="tag">Industrial Automation</span><span class="tag">Machine Vision</span><span class="tag">Fault Diagnosis</span></div>
+  </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section>
-  <h2>📡 Projects</h2>
+<section id="projects">
+  <div class="section-head"><span class="num">03</span><h2>Projects</h2></div>
+  <p class="section-sub">A mix of thesis work, coursework simulations, and hackathon builds — mostly signal processing and RF, with some deep learning mixed in.</p>
 
-  <div class="card highlight">
-    <h3>DevSwarm: Edge AI Multi-Agent System for Automated Code Analysis</h3>
-    <p class="meta">🏆 Qualcomm Summer Hackathon &ndash; 1st Prize, Bengaluru Division</p>
+  <div class="cards-grid">
+
+  <div class="card highlight span-all">
+    <h3>DevSwarm: Edge AI Multi-Agent System for Automated Code Analysis <span class="badge">🏆 1st Prize</span></h3>
+    <p class="meta">Qualcomm Summer Hackathon &middot; Bengaluru Division</p>
     <p>
       Edge AI-based multi-agent system for automated code analysis, with specialized Security, Performance,
       and Reliability agents coordinated by a Fusion Agent, built as part of a 4-member team.
@@ -175,17 +529,21 @@
       deployment blueprint covering secure client integration, multi-agent orchestration, NPU/CPU/GPU
       inference fallback, persistence, and observability.
     </p>
+    <div class="tags"><span class="tag">Edge AI</span><span class="tag">Snapdragon NPU</span><span class="tag">Multi-Agent Systems</span></div>
   </div>
 
-  <div class="card highlight">
-    <h3>Rydberg Atomic Receiver &mdash; M.Tech Thesis</h3>
+  <div class="card highlight span-all">
+    <h3>Rydberg Atomic Receiver <span class="badge">M.Tech Thesis</span></h3>
     <p>
       Reproduction and analysis of a Rydberg-atom-based RF receiver using electromagnetically induced
       transparency (EIT) and Autler&ndash;Townes splitting, including QuTiP-based master-equation simulations of
       the atomic response, sensitivity and dynamic-range analysis, and a detailed reverse-engineering
       investigation of the published results.
     </p>
-    <a href="https://github.com/PSrihari2000/rydberg-atomic-receiver-thesis">View Repository →</a>
+    <div class="tags"><span class="tag">QuTiP</span><span class="tag">Quantum Sensing</span><span class="tag">RF Receivers</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/rydberg-atomic-receiver-thesis" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
@@ -196,23 +554,25 @@
       transmits a sinusoidal carrier while the other monitors received signal power and its statistical
       variation, flagging an intrusion when both deviate significantly from a learned baseline.
     </p>
-    <p>
-      Includes: Tx/Rx GNU Radio Companion flowgraphs and an embedded Python detection block.
-    </p>
-    <a href="https://github.com/PSrihari2000/Intrusion_detection_using_GNU_Radio_USRP">View Repository →</a>
+    <p>Includes: Tx/Rx GNU Radio Companion flowgraphs and an embedded Python detection block.</p>
+    <div class="tags"><span class="tag">GNU Radio</span><span class="tag">USRP</span><span class="tag">Python</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/Intrusion_detection_using_GNU_Radio_USRP" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
-    <h3>IoT Based Infant Incubator Monitoring System</h3>
-    <p class="meta">IoT &amp; Embedded Systems &middot; 📄 Peer-reviewed publication</p>
+    <h3>IoT Based Infant Incubator Monitoring System <span class="badge" style="background:linear-gradient(135deg,#34d399,#059669); color:#04150f;">📄 Published</span></h3>
+    <p class="meta">IoT &amp; Embedded Systems</p>
     <p>
       Arduino-based IoT system to monitor temperature, humidity, pulse rate, and gas levels of an infant incubator.
       Includes real-time LCD display and cloud monitoring using ThingSpeak.
     </p>
-    <p>
-      Includes: Code, Block Diagram, Results, and Project Report.
-    </p>
-    <a href="https://github.com/PSrihari2000/IoT-based-infant-incubator-monitoring-system">View Repository →</a>
+    <p>Includes: Code, Block Diagram, Results, and Project Report.</p>
+    <div class="tags"><span class="tag">Arduino</span><span class="tag">ESP8266</span><span class="tag">ThingSpeak</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/IoT-based-infant-incubator-monitoring-system" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
@@ -222,7 +582,10 @@
       chirp interference: a denoising autoencoder (DAE) followed by a bit-detection CNN, evaluated via
       a BER-vs-SNR waterfall curve on synthetically generated signals.
     </p>
-    <a href="https://github.com/PSrihari2000/pcmfm-telemetry-denoising">View Repository →</a>
+    <div class="tags"><span class="tag">PyTorch</span><span class="tag">Telemetry</span><span class="tag">DAE + CNN</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/pcmfm-telemetry-denoising" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
@@ -232,7 +595,10 @@
       line detection and plumb-line straight-line constraint optimization to estimate and invert the
       distortion, with a hybrid GUI slider for manual refinement.
     </p>
-    <a href="https://github.com/PSrihari2000/lens-distortion-removal-matlab">View Repository →</a>
+    <div class="tags"><span class="tag">MATLAB</span><span class="tag">Image Processing</span><span class="tag">Hough Transform</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/lens-distortion-removal-matlab" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
@@ -242,13 +608,19 @@
       MNIST (99.3% test accuracy) and a manual ResNet-18 on CIFAR-10 (91.8%) and CIFAR-100 (72.1%),
       in Keras and PyTorch respectively.
     </p>
-    <a href="https://github.com/PSrihari2000/deep-learning-lab-simulations">View Repository →</a>
+    <div class="tags"><span class="tag">Keras</span><span class="tag">PyTorch</span><span class="tag">VGG16 / ResNet-18</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/deep-learning-lab-simulations" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
     <h3>ANSYS Antenna Designs</h3>
     <p>Dipole, monopole, patch, horn, and Yagi antenna simulations using HFSS.</p>
-    <a href="https://github.com/PSrihari2000/ansys-antenna-designs">View Repository →</a>
+    <div class="tags"><span class="tag">ANSYS HFSS</span><span class="tag">Antenna Design</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/ansys-antenna-designs" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
   </div>
 
   <div class="card">
@@ -262,25 +634,28 @@
     </ul>
   </div>
 
+  </div>
 </section>
 
 <!-- EDUCATION -->
-<section>
-  <h2>🎓 Education</h2>
+<section id="education">
+  <div class="section-head"><span class="num">04</span><h2>Education</h2></div>
   <div class="card">
-    <table>
-      <tr><th>Year</th><th>Degree</th><th>Institution</th><th>CGPA / %</th></tr>
-      <tr><td>2027*</td><td>M.Tech, Signal Processing and Communications</td><td>IIT Bhubaneswar</td><td>8.26/10</td></tr>
-      <tr><td>2024</td><td>B.Tech, Electronics and Communication Engineering</td><td>SNIST, Hyderabad</td><td>8.16/10</td></tr>
-      <tr><td>2019</td><td>Intermediate (Class XII)</td><td>Sri Gayatri Jr College, Hyderabad</td><td>97.5%</td></tr>
-      <tr><td>2017</td><td>Secondary School Certificate (Class X)</td><td>St. Joseph&rsquo;s High School, Kollapur</td><td>9.3/10</td></tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Year</th><th>Degree</th><th>Institution</th><th>CGPA / %</th></tr>
+        <tr><td>2027*</td><td>M.Tech, Signal Processing and Communications</td><td>IIT Bhubaneswar</td><td>8.26/10</td></tr>
+        <tr><td>2024</td><td>B.Tech, Electronics and Communication Engineering</td><td>SNIST, Hyderabad</td><td>8.16/10</td></tr>
+        <tr><td>2019</td><td>Intermediate (Class XII)</td><td>Sri Gayatri Jr College, Hyderabad</td><td>97.5%</td></tr>
+        <tr><td>2017</td><td>Secondary School Certificate (Class X)</td><td>St. Joseph&rsquo;s High School, Kollapur</td><td>9.3/10</td></tr>
+      </table>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section>
-  <h2>🧠 Core Skills</h2>
+<section id="skills">
+  <div class="section-head"><span class="num">05</span><h2>Core Skills</h2></div>
   <div class="grid">
     <div class="card">Digital Signal Processing</div>
     <div class="card">Digital &amp; Wireless Communication</div>
@@ -291,8 +666,8 @@
 </section>
 
 <!-- TOOLS -->
-<section>
-  <h2>🛠 Tools &amp; Technologies</h2>
+<section id="tools">
+  <div class="section-head"><span class="num">06</span><h2>Tools &amp; Technologies</h2></div>
   <div class="grid">
     <div class="card">C / Python / MATLAB</div>
     <div class="card">GNU Radio / USRP</div>
@@ -307,9 +682,9 @@
 </section>
 
 <!-- PUBLICATIONS -->
-<section>
-  <h2>📄 Publications</h2>
-  <div class="card">
+<section id="publications">
+  <div class="section-head"><span class="num">07</span><h2>Publications</h2></div>
+  <div class="card prose">
     <p>
       &ldquo;IoT Based Infant Incubator Monitoring System: A Hardware Module,&rdquo;
       <em>Journal of Aeronautical Materials</em>, vol. 44, no. 1, pp. 129&ndash;139, 2024.
@@ -318,9 +693,9 @@
 </section>
 
 <!-- CERTIFICATIONS -->
-<section>
-  <h2>📜 Certifications</h2>
-  <div class="card">
+<section id="certifications">
+  <div class="section-head"><span class="num">08</span><h2>Certifications</h2></div>
+  <div class="card prose">
     <ul>
       <li>AI-ML Virtual Internship (10 Weeks) &ndash; AICTE NEAT / EduSkills, supported by AWS Academy (2023)</li>
       <li>AWS Academy Graduate &ndash; Machine Learning Foundations (2023)</li>
@@ -330,9 +705,9 @@
 </section>
 
 <!-- NOTES -->
-<section>
-  <h2>📚 Learning & Notes</h2>
-  <div class="card">
+<section id="notes">
+  <div class="section-head"><span class="num">09</span><h2>Learning &amp; Notes</h2></div>
+  <div class="card prose">
     <p>
       I continuously document my learning in signal processing and communication systems.
       This includes notes, projects, and practical implementations to help others understand and use them as reference.
@@ -341,18 +716,47 @@
 </section>
 
 <!-- CONTACT -->
-<section>
-  <h2>📞 Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:puttasrihari34@gmail.com">puttasrihari34@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/PSrihari2000">PSrihari2000</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/srihari-p-ba072b253">srihari-p-ba072b253</a></p>
+<section id="contact">
+  <div class="section-head"><span class="num">10</span><h2>Contact</h2></div>
+  <div class="card prose">
+    <p>📧 Email: <a href="mailto:puttasrihari34@gmail.com">puttasrihari34@gmail.com</a></p>
+    <p>💻 GitHub: <a href="https://github.com/PSrihari2000" target="_blank" rel="noopener">PSrihari2000</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/srihari-p-ba072b253" target="_blank" rel="noopener">srihari-p-ba072b253</a></p>
   </div>
 </section>
 
 <footer>
+  <div class="social-row">
+    <a href="https://github.com/PSrihari2000" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+    <a href="https://linkedin.com/in/srihari-p-ba072b253" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .51.53 0 1.19 0h13.62C15.47 0 16 .51 16 1.15v13.7c0 .64-.53 1.15-1.19 1.15H1.19C.53 16 0 15.49 0 14.85V1.15zM4.75 13.4V6.17H2.4v7.23h2.35zM3.58 5.18c.82 0 1.33-.54 1.33-1.22-.02-.7-.51-1.22-1.31-1.22-.8 0-1.33.53-1.33 1.22 0 .68.51 1.22 1.29 1.22h.02zM6.87 13.4h2.35V9.37c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.63v3.87h2.35V9.25c0-2.17-1.16-3.18-2.7-3.18-1.26 0-1.82.7-2.13 1.18h.02V6.17H6.87c.03.66 0 7.23 0 7.23z"/></svg>
+    </a>
+    <a href="mailto:puttasrihari34@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4zm1.2.3 5.8 4.2 5.8-4.2v-.02L8 8 2.2 4.28V4.3z"/></svg>
+    </a>
+  </div>
   <p>© 2026 Srihari</p>
+  <p>Built with HTML, CSS &amp; GitHub Pages</p>
 </footer>
+
+<script>
+  var sections = document.querySelectorAll('section');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    sections.forEach(function (s) { io.observe(s); });
+  } else {
+    sections.forEach(function (s) { s.classList.add('in-view'); });
+  }
+</script>
 
 </body>
 </html>
