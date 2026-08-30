@@ -62,6 +62,38 @@
       text-decoration: none;
     }
 
+    .tag {
+      display: inline-block;
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin: 2px 4px 2px 0;
+    }
+
+    .meta {
+      color: #94a3b8;
+      font-size: 14px;
+      margin: 0 0 8px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #334155;
+    }
+
+    th {
+      color: #38bdf8;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -75,7 +107,8 @@
 
 <header>
   <h1>Srihari</h1>
-  <p>M.Tech | Signal Processing & Communication Engineering | IIT Bhubaneswar</p>
+  <p>M.Tech (2025&ndash;2027) | Signal Processing &amp; Communications | IIT Bhubaneswar</p>
+  <p>Experience in WLAN systems, SDR, and industrial automation</p>
 </header>
 
 <!-- ABOUT -->
@@ -83,7 +116,7 @@
   <h2>🧠 About Me</h2>
   <div class="card">
     <p>
-      I am a Signal Processing and Communication Engineering student at IIT Bhubaneswar.
+      I am an M.Tech candidate in Signal Processing and Communications at IIT Bhubaneswar.
       This website is a collection of everything I learn throughout my engineering journey.
     </p>
 
@@ -97,24 +130,67 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section>
+  <h2>💼 Industry Experience</h2>
+
+  <div class="card highlight">
+    <h3>Engineering Intern &ndash; WLAN Modem Tech Systems</h3>
+    <p class="meta">Qualcomm, Bengaluru, India &middot; May 2026 &ndash; July 2026</p>
+    <ul>
+      <li>Implemented and validated a traffic-aware power optimization algorithm in WLAN firmware for gaming applications on Qualcomm Wi-Fi chipsets.</li>
+      <li>Analyzed gaming traffic periodicity to optimize Wake Interval and Inactivity Timeout (ITO) parameters for adaptive WLAN power management.</li>
+      <li>Performed firmware prototyping, testing, debugging, log analysis, and latency validation with cross-functional Modem Systems, Firmware, and Power Systems teams.</li>
+      <li>Validated the prototype through latency testing: <strong>0% packet loss</strong> with only a <strong>+1&nbsp;ms</strong> round-trip latency increase (6&nbsp;ms &rarr; 7&nbsp;ms).</li>
+      <li>Conducted power analysis using current waveforms, state residency, and rail-level measurements, achieving a <strong>13.7% reduction in battery power consumption</strong> versus baseline.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Junior Automation Engineer</h3>
+    <p class="meta">Foxconn Interconnect Technology (FIT), Hyderabad, India &middot; July 2024 &ndash; Jan 2025 &middot; Apple AirPods Manufacturing</p>
+    <ul>
+      <li>Contributed to setup and high-volume manufacturing operations for Apple AirPods as part of the first cohort of Indian engineers, collaborating with multinational teams from China, Taiwan, Vietnam, and India.</li>
+      <li>Worked with automated manufacturing equipment: robotic arms, pick-and-place machines, hot-melt glue dispensing systems, optical inspection machines, pneumatic systems, conveyor systems, and servo motors.</li>
+      <li>Performed troubleshooting and fault diagnosis for automated production equipment, including sensor failure analysis and machine calibration.</li>
+      <li>Conducted Failure Analysis and Corrective Actions (FACA) and worked with machine vision inspection systems to identify root causes and improve production reliability.</li>
+    </ul>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section>
   <h2>📡 Projects</h2>
 
   <div class="card highlight">
-    <h3>IoT Based Infant Incubator Monitoring System</h3>
+    <h3>DevSwarm: Edge AI Multi-Agent System for Automated Code Analysis</h3>
+    <p class="meta">🏆 Qualcomm Summer Hackathon &ndash; 1st Prize, Bengaluru Division</p>
     <p>
-      Arduino-based IoT system to monitor temperature, humidity, pulse rate, and gas levels of an infant incubator.
-      Includes real-time LCD display and cloud monitoring using ThingSpeak.
+      Edge AI-based multi-agent system for automated code analysis, with specialized Security, Performance,
+      and Reliability agents coordinated by a Fusion Agent, built as part of a 4-member team.
     </p>
     <p>
-      Includes: Code, Block Diagram, Results, and Project Report.
+      On-device AI inference on the Snapdragon Hexagon NPU for privacy-focused code analysis (no source code
+      sent to the cloud), with semantic code chunking and parallel agent analysis, plus a production-scale
+      deployment blueprint covering secure client integration, multi-agent orchestration, NPU/CPU/GPU
+      inference fallback, persistence, and observability.
     </p>
-    <a href="https://github.com/PSrihari2000/IoT-based-infant-incubator-monitoring-system">View Repository →</a>
+  </div>
+
+  <div class="card highlight">
+    <h3>Rydberg Atomic Receiver &mdash; M.Tech Thesis</h3>
+    <p>
+      Reproduction and analysis of a Rydberg-atom-based RF receiver using electromagnetically induced
+      transparency (EIT) and Autler&ndash;Townes splitting, including QuTiP-based master-equation simulations of
+      the atomic response, sensitivity and dynamic-range analysis, and a detailed reverse-engineering
+      investigation of the published results.
+    </p>
+    <a href="https://github.com/PSrihari2000/rydberg-atomic-receiver-thesis">View Repository →</a>
   </div>
 
   <div class="card">
     <h3>Real-Time Intrusion Detection Using GNU Radio and USRP</h3>
+    <p class="meta">Wireless Communication &amp; Signal Processing</p>
     <p>
       Bistatic RF intrusion detector built with a pair of USRP software-defined radios: one continuously
       transmits a sinusoidal carrier while the other monitors received signal power and its statistical
@@ -127,6 +203,49 @@
   </div>
 
   <div class="card">
+    <h3>IoT Based Infant Incubator Monitoring System</h3>
+    <p class="meta">IoT &amp; Embedded Systems &middot; 📄 Peer-reviewed publication</p>
+    <p>
+      Arduino-based IoT system to monitor temperature, humidity, pulse rate, and gas levels of an infant incubator.
+      Includes real-time LCD display and cloud monitoring using ThingSpeak.
+    </p>
+    <p>
+      Includes: Code, Block Diagram, Results, and Project Report.
+    </p>
+    <a href="https://github.com/PSrihari2000/IoT-based-infant-incubator-monitoring-system">View Repository →</a>
+  </div>
+
+  <div class="card">
+    <h3>PCM-FM Telemetry Signal Denoising &amp; Demodulation</h3>
+    <p>
+      Deep-learning based denoising and demodulation of PCM-FM telemetry signals under AWGN and in-band
+      chirp interference: a denoising autoencoder (DAE) followed by a bit-detection CNN, evaluated via
+      a BER-vs-SNR waterfall curve on synthetically generated signals.
+    </p>
+    <a href="https://github.com/PSrihari2000/pcmfm-telemetry-denoising">View Repository →</a>
+  </div>
+
+  <div class="card">
+    <h3>Removal of Lens Distortion in Camera Images</h3>
+    <p>
+      MATLAB implementation of radial lens-distortion correction (barrel/pincushion) using Hough-transform
+      line detection and plumb-line straight-line constraint optimization to estimate and invert the
+      distortion, with a hybrid GUI slider for manual refinement.
+    </p>
+    <a href="https://github.com/PSrihari2000/lens-distortion-removal-matlab">View Repository →</a>
+  </div>
+
+  <div class="card">
+    <h3>Deep Learning Lab Simulations</h3>
+    <p>
+      Image classification CNNs trained entirely from scratch (no pretrained weights): a manual VGG16 on
+      MNIST (99.3% test accuracy) and a manual ResNet-18 on CIFAR-10 (91.8%) and CIFAR-100 (72.1%),
+      in Keras and PyTorch respectively.
+    </p>
+    <a href="https://github.com/PSrihari2000/deep-learning-lab-simulations">View Repository →</a>
+  </div>
+
+  <div class="card">
     <h3>ANSYS Antenna Designs</h3>
     <p>Dipole, monopole, patch, horn, and Yagi antenna simulations using HFSS.</p>
     <a href="https://github.com/PSrihari2000/ansys-antenna-designs">View Repository →</a>
@@ -135,39 +254,78 @@
   <div class="card">
     <h3>🚀 More Projects (Coming Soon)</h3>
     <ul>
+      <li>Advanced Communication Lab simulations (BPSK/QPSK/8-PSK/16-QAM, fading, equalization, coding) &mdash; currently private</li>
+      <li>Advanced Digital Signal Processing Lab simulations (PCA/LDA face recognition, SVD audio denoising) &mdash; currently private</li>
+      <li>Device-free RF intrusion detection via micro-Doppler sensing (dual-branch CNN) &mdash; currently private</li>
       <li>CST Studio antenna and RF simulation files</li>
       <li>Optical communication simulations (Optiwave)</li>
-      <li>Signal Processing & Communication MATLAB projects</li>
-      <li>Deep Learning simulations and models</li>
     </ul>
   </div>
 
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>🎓 Education</h2>
+  <div class="card">
+    <table>
+      <tr><th>Year</th><th>Degree</th><th>Institution</th><th>CGPA / %</th></tr>
+      <tr><td>2027*</td><td>M.Tech, Signal Processing and Communications</td><td>IIT Bhubaneswar</td><td>8.26/10</td></tr>
+      <tr><td>2024</td><td>B.Tech, Electronics and Communication Engineering</td><td>SNIST, Hyderabad</td><td>8.16/10</td></tr>
+      <tr><td>2019</td><td>Intermediate (Class XII)</td><td>Sri Gayatri Jr College, Hyderabad</td><td>97.5%</td></tr>
+      <tr><td>2017</td><td>Secondary School Certificate (Class X)</td><td>St. Joseph&rsquo;s High School, Kollapur</td><td>9.3/10</td></tr>
+    </table>
+  </div>
 </section>
 
 <!-- SKILLS -->
 <section>
   <h2>🧠 Core Skills</h2>
   <div class="grid">
-    <div class="card">Signal Processing</div>
-    <div class="card">Wireless Communication</div>
-    <div class="card">Communication Systems</div>
+    <div class="card">Digital Signal Processing</div>
+    <div class="card">Digital &amp; Wireless Communication</div>
+    <div class="card">Communication Networks</div>
+    <div class="card">Optical Communication</div>
     <div class="card">Machine Learning / Deep Learning</div>
   </div>
 </section>
 
 <!-- TOOLS -->
 <section>
-  <h2>🛠 Tools & Technologies</h2>
+  <h2>🛠 Tools &amp; Technologies</h2>
   <div class="grid">
-    <div class="card">MATLAB</div>
-    <div class="card">Python / C</div>
+    <div class="card">C / Python / MATLAB</div>
+    <div class="card">GNU Radio / USRP</div>
+    <div class="card">CST Studio Suite</div>
     <div class="card">ANSYS HFSS</div>
-    <div class="card">LaTeX</div>
-    <div class="card">GNU Radio</div>
-    <div class="card">CST Studio</div>
-    <div class="card">Optiwave</div>
+    <div class="card">OptiSystem</div>
     <div class="card">Arduino IDE</div>
     <div class="card">Google Colab</div>
+    <div class="card">Git / GitHub / Perforce (P4V)</div>
+    <div class="card">VS Code / LaTeX</div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section>
+  <h2>📄 Publications</h2>
+  <div class="card">
+    <p>
+      &ldquo;IoT Based Infant Incubator Monitoring System: A Hardware Module,&rdquo;
+      <em>Journal of Aeronautical Materials</em>, vol. 44, no. 1, pp. 129&ndash;139, 2024.
+    </p>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+  <h2>📜 Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>AI-ML Virtual Internship (10 Weeks) &ndash; AICTE NEAT / EduSkills, supported by AWS Academy (2023)</li>
+      <li>AWS Academy Graduate &ndash; Machine Learning Foundations (2023)</li>
+      <li>Cisco Networking Academy &ndash; CCNAv7: Switching, Routing, and Wireless Essentials (2022)</li>
+    </ul>
   </div>
 </section>
 
@@ -186,8 +344,9 @@
 <section>
   <h2>📞 Contact</h2>
   <div class="card">
-    <p>Email: puttasrihari34@gmail.com</p>
+    <p>Email: <a href="mailto:puttasrihari34@gmail.com">puttasrihari34@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/PSrihari2000">PSrihari2000</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/srihari-p-ba072b253">srihari-p-ba072b253</a></p>
   </div>
 </section>
 
