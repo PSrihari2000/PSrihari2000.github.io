@@ -533,14 +533,21 @@
   </div>
 
   <div class="card highlight span-all">
-    <h3>Rydberg Atomic Receiver <span class="badge">M.Tech Thesis</span></h3>
+    <h3>Channel Estimation for Rydberg Atomic Receivers <span class="badge">M.Tech Thesis &middot; In Progress</span></h3>
     <p>
-      Reproduction and analysis of a Rydberg-atom-based RF receiver using electromagnetically induced
-      transparency (EIT) and Autler&ndash;Townes splitting, including QuTiP-based master-equation simulations of
-      the atomic response, sensitivity and dynamic-range analysis, and a detailed reverse-engineering
-      investigation of the published results.
+      MATLAB reproduction of a projection-gradient-descent (PGD) channel estimation framework for
+      Rydberg-atom-based MIMO receivers (Xu et al., IEEE Wireless Communications Letters, 2025), covering
+      both 1D and 2D antenna arrays: a closed-form gradient-descent estimator, a biased Gerchberg&ndash;Saxton
+      phase-retrieval baseline, a rank-constrained PGD estimator for 2D arrays, and Cram&eacute;r&ndash;Rao lower
+      bound benchmarking.
     </p>
-    <div class="tags"><span class="tag">QuTiP</span><span class="tag">Quantum Sensing</span><span class="tag">RF Receivers</span></div>
+    <p>
+      Every estimator and bound is re-derived directly from the paper's equations and checked line-by-line
+      against the implementation, rather than tuned to visually match the published curves &mdash; free
+      parameters the paper leaves undocumented (e.g. the reference-signal power margin) are disclosed and
+      tested empirically instead of silently fit.
+    </p>
+    <div class="tags"><span class="tag">MATLAB</span><span class="tag">Channel Estimation</span><span class="tag">CRLB</span></div>
     <a class="repo-link" href="https://github.com/PSrihari2000/rydberg-atomic-receiver-thesis" target="_blank" rel="noopener">
       View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
     </a>
@@ -624,13 +631,31 @@
   </div>
 
   <div class="card">
+    <h3>CST Studio Antenna Designs</h3>
+    <p>Antenna and microwave circuit designs in CST Studio Suite: dipole, microstrip patch, Bow-Tie/28&nbsp;GHz arrays, power dividers, and low-pass filters.</p>
+    <div class="tags"><span class="tag">CST Studio Suite</span><span class="tag">Microwave Circuits</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/cst-studio-antenna-designs" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>DWDM Dispersion Compensation</h3>
+    <p>Comparison of chromatic-dispersion compensation schemes (SDCF, FBGDC, CFBGDC) under RZ and NRZ line coding for a DWDM link, simulated in OptiSystem.</p>
+    <div class="tags"><span class="tag">OptiSystem</span><span class="tag">DWDM</span><span class="tag">Optical Communication</span></div>
+    <a class="repo-link" href="https://github.com/PSrihari2000/dwdm-dispersion-compensation-optisystem" target="_blank" rel="noopener">
+      View Repository <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.72 1.03a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H1.5a.75.75 0 0 1 0-1.5h10.44L8.72 2.09a.75.75 0 0 1 0-1.06z"/></svg>
+    </a>
+  </div>
+
+  <div class="card">
     <h3>🚀 More Projects (Coming Soon)</h3>
     <ul>
+      <li>OFDM packet transceiver in GNU Radio (BPSK header / QPSK payload, USRP front end) &mdash; currently private</li>
+      <li>BPSK video transceiver in GNU Radio (differential BPSK, RRC pulse shaping, USRP front end) &mdash; currently private</li>
       <li>Advanced Communication Lab simulations (BPSK/QPSK/8-PSK/16-QAM, fading, equalization, coding) &mdash; currently private</li>
       <li>Advanced Digital Signal Processing Lab simulations (PCA/LDA face recognition, SVD audio denoising) &mdash; currently private</li>
       <li>Device-free RF intrusion detection via micro-Doppler sensing (dual-branch CNN) &mdash; currently private</li>
-      <li>CST Studio antenna and RF simulation files</li>
-      <li>Optical communication simulations (Optiwave)</li>
     </ul>
   </div>
 
@@ -643,11 +668,9 @@
   <div class="card">
     <div class="table-wrap">
       <table>
-        <tr><th>Year</th><th>Degree</th><th>Institution</th><th>CGPA / %</th></tr>
-        <tr><td>2027*</td><td>M.Tech, Signal Processing and Communications</td><td>IIT Bhubaneswar</td><td>8.26/10</td></tr>
-        <tr><td>2024</td><td>B.Tech, Electronics and Communication Engineering</td><td>SNIST, Hyderabad</td><td>8.16/10</td></tr>
-        <tr><td>2019</td><td>Intermediate (Class XII)</td><td>Sri Gayatri Jr College, Hyderabad</td><td>97.5%</td></tr>
-        <tr><td>2017</td><td>Secondary School Certificate (Class X)</td><td>St. Joseph&rsquo;s High School, Kollapur</td><td>9.3/10</td></tr>
+        <tr><th>Year</th><th>Degree</th><th>Institution</th></tr>
+        <tr><td>2027*</td><td>M.Tech, Signal Processing and Communications</td><td>IIT Bhubaneswar</td></tr>
+        <tr><td>2024</td><td>B.Tech, Electronics and Communication Engineering</td><td>SNIST, Hyderabad</td></tr>
       </table>
     </div>
   </div>
